@@ -6,16 +6,28 @@ This repository contains the code used to conduct experiments described in the r
 ### Dependencies
 To use this code for your own experiments, these prerequisites must be met. 
 * Installation of MATLAB version R2022a (comment: do we say this version OR at least the most recent?) running on a 2021 MacBook Pro with Apple M1 Max chip and 32GB memory (comment: doesn't feel reasonable to say this but i feel we should mention it somewhere?) .
-* The 40 numerical images used in the experiments are selected from MATLAB® and multiple online sample image databases including NASA’s California Institute of Technology, the University of Southern California, and Stanford University. The selected testing and training images are available to the public and can be found in the references of our paper [11, 13, 14]. The names of all 40 images needed for these experiments can be found in the Function directory in 'namesofimages.m'.
+* The 40 numerical images used in the experiments are selected from MATLAB® and multiple online sample image databases including NASA’s California Institute of Technology, the University of Southern California, and Stanford University. The selected testing and training images are available to the public and can be found in the references of our paper [11, 12, 14, 15]. The names of all 40 images needed for these experiments can be found in the Function directory in 'namesofimages.m'.
 * Installation of the Image Processing Toolbox within MATLAB. (comment: was this used?)
 * Consider any specific modifications that need to be made to files/folders 
 
 ### Executing program
+* Download all files in 'Functions' folder, 'GenerateAllFiguresforpaper.m', and 'GenerateAllTablesforpaper.m'.
+* Download all 40 numerical images shown in 'namesofimages.m' from their respective websites.
+* pausesd b/c i ran into an error
+
+
+Some templates mention adding sections for Help, Authors, Version History, License, and Acknowledgements. See if we want these too. 
 
 ## Help
 think of any common problems or issues that's helpful to address
 
-Some templates mention adding sections for Authors, Version History, License, and Acknowledgements. See if we want these too. 
+## Authors
+* Salina Bermudez, School of Mathematical and Statistical Sciences, Arizona State University, AZ, (smbermu1@asu.edu, ).
+* Rosemary Renaut, School of Mathematical and Statistical Sciences, Arizona State University, AZ, (renaut@asu.edu).
+
+## Version History
+* 0.1
+  *Initial Release
 
 
 
