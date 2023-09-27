@@ -27,7 +27,7 @@ think of any common problems or issues that's helpful to address
 
 ## Version History
 * 0.1
-  *Initial Release
+  * Initial Release
 
 
 
