@@ -4,10 +4,6 @@ if nargin<7
 end
 tic
 switch pickkp
-    case 'ncp'
-        [kopt,minfun]= FindKPparam_ncp(B, Ac,Ar,T,varargin);
-   case 'fminncp'
-        [kopt,minfun]= FindKPparamfminbnd_ncp(B, Ac,Ar,T,varargin);
     case 'mre'
         [kopt,minfun]= FindKPparam(X,B, Ac,Ar,T,varargin);
     case 'fminmre'
