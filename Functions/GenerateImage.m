@@ -1,11 +1,7 @@
 function [B,X] = GenerateImage(Ac,Ar, varargin)
-% GenerateImage given X and operators KP form
-%   Note all images are scaled to max of Btrue since Btrue scaled to max 1
-% varargin{5} X : array of size m by n which is the image to blur, or
-%                this references an image file and not an array
 m=size(Ac,1);
 n=size(Ar,1);
-if nargin >= 3 % read in an image
+if nargin >= 3 
     if ischar(varargin{1})
         X = imread(varargin{1});
         X = double(im2gray(X));
@@ -14,7 +10,7 @@ if nargin >= 3 % read in an image
         X = varargin{1};
     end
     [mX,nX]=size(X);
-    if m<mX % try to take from center of image
+    if m<mX 
         dm=floor((mX-m)/2);
         X=X(dm+1:dm+m,:);
     end
@@ -23,7 +19,7 @@ if nargin >= 3 % read in an image
         X=X(:,dn+1:n+dn);
     end
 end
-if nargin<3 ||  isempty(X)%standard image of circles and squares
+if nargin<3 ||  isempty(X)
     X = zeros(m,n);
     I = round(m/5):round(3*m/5);
     J = round(n/5):round(3*n/5);
