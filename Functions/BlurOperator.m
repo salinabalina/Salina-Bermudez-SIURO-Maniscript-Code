@@ -1,4 +1,8 @@
 function [Ac,Ar] = BlurOperator(varargin)
+% determine a blurring operator to use for all images
+% varargin{1} m
+% varargin{2} n
+% varargin{3} bl: the blurring operator to choose
 if nargin<1 m=64;   else m=varargin{1};end
 if nargin<2 n=64;   else n=varargin{2};end
 if nargin<3 bl=1;   else bl=varargin{3};end
@@ -6,6 +10,7 @@ if nargin<4 showimages=1; else showimages=varargin{4};end
 if isempty(m) m=64;end
 if isempty(n) n=64;end
 if isempty(bl) bl=1; end
+% The blurring operators
 c = zeros(max(n,m),1);
 r = zeros(max(n,m),1);
 switch bl
