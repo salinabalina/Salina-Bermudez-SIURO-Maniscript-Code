@@ -1,4 +1,9 @@
 function [B] = AddNoise(Btrue,noisetype,nl,varargin)
+% Addnoise : add noise to an image dependent on noise type and level
+% Btrue : blurred true image.
+% noisetype : type of noise
+% nl : noiselevel
+% showres 1 to look at the old and new versions of the noise
 if nargin<4
     showres=0;
 else
@@ -7,10 +12,10 @@ end
 switch noisetype
     case 'gaussian'
         snrvec=[10 25 40];
-         B = imnoise(Btrue, 'gaussian');
-        e = B-Btrue;
+         B = imnoise(Btrue, 'gaussian'); %B : Image with blur and noise
+        e = B-Btrue; %e : measure of noise added
         eta = abs(10^-(snrvec(nl)/20))*norm(Btrue,'fro')/norm(e,'fro');
-        E = eta*e;
+        E = eta*e; %E : noise level by SNR values
         if showres
             Eold = randn(size(Btrue))*nl;Bold=Eold+Btrue;
             figure, tiledlayout('flow'), nexttile, imshow(Btrue, []),title('Btrue'),
