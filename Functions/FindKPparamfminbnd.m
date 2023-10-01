@@ -1,4 +1,6 @@
 function [optKP, minerr] = FindKPparamfminbnd(X,B, Ac,Ar,R,varargin)
+% For given set of images B and true images X
+% For Ac, Ar, operator, find the best choice to truncate for the full KP
 cc='k';mm='h';
 if ~isempty(varargin)
     if nargin >5
@@ -8,12 +10,13 @@ if ~isempty(varargin)
         mm=cell2mat(varargin{1}(2));
     end
 end
+% Find the SVD
 [Uc,Sc,Vc]=svd(Ac);
 [Ur,Sr,Vr]=svd(Ar);
-Sc=diag(Sc); 
-Sr=diag(Sr);
-KPSVs=Sc*Sr'; 
-[sortKP, sortKPind]=sort(KPSVs(:),'descend');
+Sc=diag(Sc); %extract into diagonal matrix 
+Sr=diag(Sr); %extract into diagonal matrix
+KPSVs=Sc*Sr'; %KP singular values page 50 HNO book
+[sortKP, sortKPind]=sort(KPSVs(:),'descend'); % index into sorted values of the KPs
 [m,n]=size(KPSVs);
 maxsv=sortKP(1);
 tolstart=1e-8;
