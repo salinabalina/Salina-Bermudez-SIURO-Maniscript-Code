@@ -10,11 +10,11 @@ if ~isempty(varargin)
 end
 [Uc,Sc,Vc]=svd(Ac);
 [Ur,Sr,Vr]=svd(Ar);
-Sc=diag(Sc); 
-Sr=diag(Sr); 
-KPSVs=Sc*Sr'; 
+Sc=diag(Sc); %extract into diagonal matrix
+Sr=diag(Sr); %extract into diagonal matrix
+KPSVs=Sc*Sr'; %KP singular values page 50 HNO book
 [m,n]=size(KPSVs);
-[sortKP, sortKPind]=sort(KPSVs(:),'descend');
+[sortKP, sortKPind]=sort(KPSVs(:),'descend'); % index into sorted values of the KPs
 CoefB=zeros(m,n);
 for j=1:T
 CoefB=CoefB+(Uc'*B{j}*Ur).^2;
@@ -29,4 +29,4 @@ end
 [gcvval, kopt]=min(gcvfun(:));
 semilogy(1:kind, gcvfun, 'Color',cc);hold on
 semilogy(kopt, gcvval,'Marker',mm, 'Color', cc,'MarkerSize',12); 
-end 
+end   
