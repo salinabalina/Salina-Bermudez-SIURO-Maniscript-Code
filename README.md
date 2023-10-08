@@ -11,8 +11,11 @@ To use this code for your own experiments, these prerequisites must be met.
 * All of the tables generated are in '.tex' files and require the appropriate tool to properly open.
 
 ### Executing program
-* Download all files in 'Functions' folder, 'GenerateAllFiguresforpaper.m', and 'GenerateAllTablesforpaper.m'.
-* Download all 40 numerical images shown in 'namesofimages.m' from their respective websites as .tiff images.
+* Download all files in 'Functions' folder
+* Download all 40 numerical images shown in 'namesofimages.m' from their respective websites as .tiff images. Place in 'Images' folder
+
+### Illustrating the results
+* Run the script GenerateResults
 
 Some templates mention adding sections for Help, Authors, Version History, License, and Acknowledgements. See if we want these too. 
 

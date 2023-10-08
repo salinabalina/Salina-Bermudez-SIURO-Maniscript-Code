@@ -1,8 +1,26 @@
 function [B,X] = GenerateImage(Ac,Ar, varargin)
-% GenerateImage given X and operators KP form
+%%
+% Generate a blurred image depending on Ac and Ar
 % Note all images are scaled to max of Btrue since Btrue scaled to max 1
-% varargin{5} X : array of size m by n which is the image to blur, or
-%                this references an image file and not an array
+%
+% Inputs
+%
+% Ac:  A= Ar cross Ac
+% Ar:  A= Ar cross Ac
+% varargin{1}:  
+%   read in an image with name varargin{1} if a character 
+%   image might be in varargin{1} when not a character
+%   otherwise use a standard shapes image if varargin not provided
+%
+% Outputs
+%
+% B : the blurred image B = Ac X Ar'
+% X:  the image used
+%
+% Update October 6, 2023.
+% Copyright: Salina Bermudez and Rosemary Renaut
+%
+%%
 m=size(Ac,1);
 n=size(Ar,1);
 if nargin >= 3 % read in an image

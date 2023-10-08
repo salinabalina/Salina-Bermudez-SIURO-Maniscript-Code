@@ -1,3 +1,21 @@
+function [X,m,n] = nameofimages(m,n,T)
+%%
+% Produce a cell array with the  images
+% Refer to the paper for websites with images that need to be obtained.
+% Inputs : 
+% m : desired size of the image in rows
+% n: : desired size of the image in columns
+% T : desired number of images (maximum is 40)
+%
+% Outputs: 
+% X : cell array with the  images to be used for the paper
+% m : actual size of the image in rows (wil be minimum over all images)
+% n: : actual size of the image in columns  (wil be minimum over all images)
+%
+% Update October 8, 2023.
+% Copyright: Salina Bermudez and Rosemary Renaut
+%
+%%
 Y{1} = 'house.tiff';
 Y{2} = '7.1.09.tiff';
 Y{3} = '7.1.08.tiff';
@@ -34,7 +52,25 @@ Y{33}= 'PIA19412.tif';
 Y{34}= 'harbour512x512.tif';
 Y{35}= 'PIA19420.tif';
 Y{36}= 'PIA19422.tif';
-Y{37}= 'peppers512x512.tif';  
+Y{37}= 'peppers512x512.tif';
 Y{38}= 'PIA19444.tif';
-Y{39}= 'airfield512x512.tif';  
+Y{39}= 'airfield512x512.tif';
 Y{40}= '7.1.02.tiff';
+if T>40
+    disp('T too large only 40 images');
+    return;
+end
+for j=1:T
+    X{j}= double(im2gray(imread(Y{j}))); 
+    [mX(j),nX(j)]=size(X{j});if mX(j)>nX(j), X{j}=transpose(X{j}); [mX(j),nX(j)]=size(X{j});end
+end
+% Smallest Image
+m=min([mX,m]);n=min([nX,n]);
+% Now put the images in the middle of the used image if possible
+for j=1:T
+    if mX(j)>m, dm(j)=floor((mX(j)-m)/2)+1;X{j}=X{j}(dm(j):dm(j)+m-1,:);end
+    if nX(j)>n,   dn(j)=floor((nX(j)-n)/2)+1;  X{j}=X{j}(:, dn(j):dn(j)+n-1);   end
+    [mX(j),nX(j)]=size(X{j});
+end
+m=min([mX,m]);n=min([nX,n]);
+end
