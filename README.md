@@ -11,17 +11,24 @@ To use this code for your own experiments, these prerequisites must be met.
 * All of the tables generated are in '.tex' files and require the appropriate tool to properly open.
 
 ### Executing program
-* Download all files shown here. 
-* Download all 40 numerical images shown in 'namesofimages.m' from their respective websites as .tiff images. Place in 'Images' folder
+* Download all GenerateResults.m script.
+* Download all functions and place into subfolder titled 'Functions'.
+* Download all 40 numerical images shown in 'namesofimages.m' from their respective websites as .tiff images. Place in subfolder titled 'Images'.
+  
 
 ### Illustrating the results
-* Run the script GenerateResults.m
+* Run the script GenerateResults.m to obtain all images and tables shown in the associated report.
 
 ## Help
-think of any common problems or issues that's helpful to address
+* Ensure that the image names are not altered when downloaded from their websites.
+* Make sure all functions and images are in their respective subfolders
 
-## Acknowledgements
-Anyone who uses this code must acknowledge the github and paper. (fix)
+## Acknowledgment
+
+If you use this code for your work or research, please acknowledge the GitHub repository and cite the associated paper titled "Learning the Truncation Index of the Kronecker Product SVD for Image Restoration" authored by Salina Bermudez and project advisor Rosemary Renaut for the results obtained using this code.
+
+GitHub Repository: [https://github.com/sbermudez01/Salina-Bermudez-SIURO-Manuscript-Code.git]
+Undergraduate Paper: [Insert the Citation Information for Your Paper]
 
 
 ## Authors
