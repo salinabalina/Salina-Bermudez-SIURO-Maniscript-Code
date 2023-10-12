@@ -5,22 +5,24 @@ This repository contains the code used to conduct experiments described in the r
 ## Getting Started
 ### Dependencies
 To use this code for your own experiments, these prerequisites must be met. 
-* The code works on MATLAB version R2023b running on a 2023 MacBook Pro with Apple M2 Pro chip and 16GB memory and we cannot promise results on later versions.
+* The code was run on MATLAB version R2023b on a 2023 MacBook Pro with Apple M2 Pro chip and 16GB memory. We cannot promise results on later versions.
 * The 40 numerical images used in the experiments are selected from MATLAB® and multiple online sample image databases including NASA’s California Institute of Technology, the University of Southern California, and Stanford University. The selected testing and training images are available to the public and can be found in the references of our paper [11, 12, 14, 15]. The names of all 40 images needed for these experiments can be found in the Function directory in 'namesofimages.m'.
 * This code requires the MATLAB Add-On 'Image Processing Toolbox'.
 * All of the tables generated are in '.tex' files and require the appropriate tool to properly open.
 
 ### Executing program
-* Download all files in 'Functions' folder
+* Download all files shown here. 
 * Download all 40 numerical images shown in 'namesofimages.m' from their respective websites as .tiff images. Place in 'Images' folder
 
 ### Illustrating the results
-* Run the script GenerateResults
-
-Some templates mention adding sections for Help, Authors, Version History, License, and Acknowledgements. See if we want these too. 
+* Run the script GenerateResults.m
 
 ## Help
 think of any common problems or issues that's helpful to address
+
+## Acknowledgements
+Anyone who uses this code must acknowledge the github and paper. (fix)
+
 
 ## Authors
 * Salina Bermudez, School of Mathematical and Statistical Sciences, Arizona State University, AZ, (smbermu1@asu.edu).
