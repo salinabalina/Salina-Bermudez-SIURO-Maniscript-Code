@@ -22,7 +22,7 @@ To use this code for your own experiments, these prerequisites must be met.
 ## Help
 * Ensure that the image names are not altered when downloaded from their websites.
 * Make sure all functions and images are in their respective subfolders.
-* Figures 9d-9f and 10d-10f correlate with the response.tex for the review board and not the actual paper. 
+* Figures 9d-9f and 10d-10f produced from the GenerateResults.m script correlate with the response.tex for the SIURO review board and not the actual paper. 
 
 ## Acknowledgment
 
