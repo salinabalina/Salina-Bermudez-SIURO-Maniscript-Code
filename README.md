@@ -30,7 +30,7 @@ If you use this code for your work or research, please acknowledge the GitHub re
 
 GitHub Repository: [https://github.com/sbermudez01/Salina-Bermudez-SIURO-Manuscript-Code.git]
 <br>
-Undergraduate Paper: [Insert the Citation Information for Your Paper]
+Undergraduate Paper: [https://www.siam.org/publications/siuro/volume-16]
 
 
 ## Authors
